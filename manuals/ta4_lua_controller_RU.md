@@ -55,9 +55,9 @@ https://github.com/joe7575/techage/blob/master/manuals/ta4_lua_controller_RU.pdf
 
 
 
-## TA4 Lua Controller Blocks
+## Блоки TA4 Lua Контроллера
 
-### TA4 Lua Controller
+### TA4 Lua Контроллер
 
 The controller block has a menu form with the following tabs:
 
