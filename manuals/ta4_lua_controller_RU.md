@@ -59,9 +59,9 @@ https://github.com/joe7575/techage/blob/master/manuals/ta4_lua_controller_RU.pdf
 
 ### TA4 Lua Контроллер
 
-The controller block has a menu form with the following tabs:
+У блока контроллера есть меню с вкладками:
 
-- the `init` tab for the initialization code block
+- Вкладка `init` для вкладки кода инициализации
 - the `func` tab for the Lua functions
 - the `loop` tab for the main code block
 - the `outp` tab for debugging outputs via `$print()`
