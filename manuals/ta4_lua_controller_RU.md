@@ -1,57 +1,57 @@
-# TA4 Lua Controller
+# TA4 Lua Контроллер
 
 ![Lua Controller](https://github.com/joe7575/techage/blob/master/textures/techage_lua_controller_inventory.png)
 
-The TA4 Lua Controller is a small computer, programmable in Lua to control your machinery.
-In contrast to the ICTA Controller this controller allows to implement larger and more complex programs.
+TA4 Lua Контроллер это маленький компьютер, программируемый на языке Lua для контроля машин.
+Для разницы между ICTA Контроллером, этот контроллер позволяет создавать более большие и сложные программы.
 
-But to write Lua scripts, some knowledge with the programming language Lua is required. 
+Но чтобы писать скрипты Lua, у тебя должны быть знания о языке програмированния Lua. 
 
-Minetest uses Lua 5.1. The reference document for Lua 5.1 is [here](https://www.lua.org/manual/5.1/). The  book [Programming in Lua (first edition)](https://www.lua.org/pil/contents.html) is also a perfect source for learning Lua.
+Luanti (Формально Minetest) использует Lua 5.1. Документация для Lua 5.1 [тут](https://www.lua.org/manual/5.1/). Книга [Programming in Lua (first edition)](https://www.lua.org/pil/contents.html) тоже хороший источник для изучения Lua.
 
-This TA4 Lua Controller manual is also available as PDF:
+Эта инструкция для TA4 Lua Контроллеру также доступна в формате PDF:
 
-https://github.com/joe7575/techage/blob/master/manuals/ta4_lua_controller_EN.pdf
+https://github.com/joe7575/techage/blob/master/manuals/ta4_lua_controller_RU.pdf
 
 
 
-## Table of Contents
+## Содержание
 
-- [TA4 Lua Controller](#ta4-lua-controller)
-  - [Table of Contents](#table-of-contents)
-  - [TA4 Lua Controller Blocks](#ta4-lua-controller-blocks)
-    - [TA4 Lua Controller](#ta4-lua-controller-1)
-    - [Battery](#battery)
-    - [TA4 Lua Server](#ta4-lua-server)
-    - [TA4 Lua Controller Terminal](#ta4-lua-controller-terminal)
-    - [TA4 Sensor Chest](#ta4-sensor-chest)
+- [TA4 Lua Контроллер](#ta4-lua-controller)
+  - [Содержание](#table-of-contents)
+  - [Блоки TA4 Lua Контроллера](#ta4-lua-controller-blocks)
+    - [TA4 Lua Контроллер](#ta4-lua-controller-1)
+    - [Батарея](#battery)
+    - [TA4 Lua Сервер](#ta4-lua-server)
+    - [Терминал TA4 Lua Контроллера](#ta4-lua-controller-terminal)
+    - [TA4 Сенсорный Сундук](#ta4-sensor-chest)
   - [Lua Functions and Environment](#lua-functions-and-environment)
-    - [Lua Functions and Limitations](#lua-functions-and-limitations)
-    - [Arrays, Stores, and Sets](#arrays-stores-and-sets)
+    - [Функции и Ограничения Lua](#lua-functions-and-limitations)
+    - [Arrays, Stores, и Sets](#arrays-stores-and-sets)
       - [Arrays](#arrays)
       - [Stores](#stores)
       - [Sets](#sets)
-    - [Initialization, Cyclic Task, and Events](#initialization-cyclic-task-and-events)
-      - [Initialization](#initialization)
-      - [Cyclic Task](#cyclic-task)
-      - [Events](#events)
-  - [Lua Controller Functions](#lua-controller-functions)
-    - [Controller local Functions](#controller-local-functions)
-      - [Input Example](#input-example)
-    - [Techage Command Functions](#techage-command-functions)
-    - [Server and Terminal Functions](#server-and-terminal-functions)
-    - [Communication between Lua Controllers](#communication-between-lua-controllers)
-    - [Further Functions](#further-functions)
-  - [Example Scripts](#example-scripts)
-    - [Simple Counter](#simple-counter)
-    - [Hello World](#hello-world)
-    - [For Loop with range(from, to)](#for-loop-with-rangefrom-to)
-    - [Monitoring Chest \& Furnace](#monitoring-chest--furnace)
-    - [Simple Calculator](#simple-calculator)
-    - [Welcome Display](#welcome-display)
-    - [Sensor Chest](#sensor-chest)
-    - [Read the "TA4 4x Button"](#read-the-ta4-4x-button)
-    - [Emails](#emails)
+    - [Инициализация, Цикличные Задачи, и События](#initialization-cyclic-task-and-events)
+      - [Инициализация](#initialization)
+      - [Цикличные Задачи (Cyclic Task)](#cyclic-task)
+      - [События (Events)](#events)
+  - [Функции Lua Контроллера](#lua-controller-functions)
+    - [Локальные Функции Контроллера](#controller-local-functions)
+      - [Пример Ввода](#input-example)
+    - [Функции Команд Techage](#techage-command-functions)
+    - [Функции Сервера и Терминала](#server-and-terminal-functions)
+    - [Коммуникация между Lua Контроллерами](#communication-between-lua-controllers)
+    - [Дополнительные Функции](#further-functions)
+  - [Скрипты для примера](#example-scripts)
+    - [Простой счётчик](#simple-counter)
+    - [Привет мир](#hello-world)
+    - [От Loop С range(from, to)](#for-loop-with-rangefrom-to)
+    - [Просматриваемый Сундук с Печкой](#monitoring-chest--furnace)
+    - [Простой калькулятор](#simple-calculator)
+    - [Дисплей "Добро Пожаловать"](#welcome-display)
+    - [Сенсорный Сундук](#sensor-chest)
+    - [Прочитай "Кнопку TA4 4x"](#read-the-ta4-4x-button)
+    - [Электронная почта](#emails)
 
 
 
