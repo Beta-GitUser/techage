@@ -62,11 +62,11 @@ https://github.com/joe7575/techage/blob/master/manuals/ta4_lua_controller_RU.pdf
 У блока контроллера есть меню с вкладками:
 
 - Вкладка `init` для вкладки кода инициализации
-- the `func` tab for the Lua functions
-- the `loop` tab for the main code block
-- the `outp` tab for debugging outputs via `$print()`
-- the `notes` tab for your code snippets or other notes (like a clipboard)
-- the `help` tab with information to the available functions
+- Вкладка `func` для Lua функций
+- Вкладка `loop` для основного блока кода
+- Вкладка `outp` для отладочного кода, по типу `$print()`
+- Вкладка `notes` для основ кода и/или других заметок (вроде записок)
+- Вкладка `help` содержит информацию о доступных функциях
 
 The controller needs power to work. A battery pack has to be placed nearby.
 
